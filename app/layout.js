@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 // Optional: you can remove this metadata block in JS projects,
 // or keep it simple if you want
 export const metadata = {
-  title: "TeamUp",
+  title: "ENTER - Student Event Platform",
   description: "Find events, connect, and team up with students.",
 };
 

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Hegarty&family=Bebas+Neue&family=Bubblegum+Sans&family=Bungee&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Limelight&family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mozilla+Headline:wght@200..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&family=VT323&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -11,10 +13,22 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+.bbh-sans-bartle-regular {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-regular {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
