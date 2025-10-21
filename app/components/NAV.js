@@ -84,7 +84,7 @@ function NAV() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 h-screen w-2/3 bg-black/90 backdrop-blur-xl text-white flex flex-col items-center justify-center space-y-8 text-2xl shadow-lg md:hidden z-50"
+              className="fixed top-0 right-0 h-screen w-2/3 bg-black/90 backdrop-blur-xl text-white flex flex-col items-center pt-20 space-y-8 text-2xl shadow-lg md:hidden z-50"
             >
               {["Home", "Events", "Team", "About", "Contact"].map((item) => (
                 <motion.a

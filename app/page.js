@@ -8,7 +8,7 @@ export default function Home() {
       <NAV />
 
       {/* Hero Section */}
-      <div className="flex min-h-screen flex-col lg:flex-row items-center justify-center px-8 md:px-16 lg:px-24 py-16 text-white">
+      <div className="flex min-h-screen flex-col lg:flex-row items-center justify-center md:justify-evenly px-8 md:px-16 lg:px-24 py-16 text-white">
         {/* Left Text Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-6 max-w-xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bbh-sans-bartle-regular leading-tight">
