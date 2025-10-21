@@ -31,7 +31,7 @@ export default function Home() {
         {/* Right Image Section */}
         <div className="mt-10 lg:mt-0 lg:w-[45%] w-full flex justify-center">
           <Image
-            src="/hero.jpg"
+            src="/hero1.jpg"
             alt="Event Collaboration"
             width={500}
             height={500}
