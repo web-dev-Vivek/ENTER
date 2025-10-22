@@ -6,6 +6,7 @@ import NAV from "./components/NAV";
 import Teamdid from "./components/Teamdid";
 import Link from "next/link";
 import gsap from "gsap";
+import TeamHere from "./components/teamhere";
 
 export default function Home() {
   const [showPage, setShowPage] = useState(false);
@@ -75,6 +76,7 @@ export default function Home() {
           </div>
 
           <Teamdid />
+          <TeamHere />
         </>
       )}
     </div>
