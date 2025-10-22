@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 function NAV() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,24 +37,35 @@ function NAV() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black text-white z-50 px-6 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full bg-none text-white z-50 px-6 py-3 flex justify-between items-center">
       {/* Logo */}
       <div className="text-2xl font-bold bbh-sans-bartle-regular tracking-wide">
         ENTER
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-8 text-lg font-medium">
-        {["Home", "Events", "Team", "About", "Contact"].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
-            className="hover:text-gray-300 transition"
-          >
-            {item}
-          </a>
-        ))}
+      <div className="hidden md:flex p-2 bg-white/20 backdrop-blur-lg rounded-full space-x-7 w-auto justify-center md:w-[32%] text-lg font-medium">
+        {["Home", "Events", "Team", "About", "Contact"].map((item) =>
+          item === "Home" ? (
+            <a key={item} href="/" className="hover:text-gray-300 transition">
+              {item}
+            </a>
+          ) : (
+            <a
+              key={item}
+              href={`/${item.toLowerCase()}`}
+              className="hover:text-gray-300 transition"
+            >
+              {item}
+            </a>
+          )
+        )}
       </div>
+      <Link href="/sign-in">
+        <button className="bg-white md:block hidden text-black px-4 py-2 rounded-md">
+          Sign In
+        </button>
+      </Link>
 
       {/* Mobile Hamburger */}
       <div className="md:hidden z-[70]">
