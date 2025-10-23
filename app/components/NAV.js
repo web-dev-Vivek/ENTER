@@ -39,9 +39,12 @@ function NAV() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-none text-white z-50 px-6 py-3 flex justify-between items-center">
       {/* Logo */}
-      <div className="text-2xl font-bold bbh-sans-bartle-regular tracking-wide">
+      <a
+        href="/"
+        className="text-2xl font-bold bbh-sans-bartle-regular tracking-wide"
+      >
         ENTER
-      </div>
+      </a>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex p-2 bg-white/20 backdrop-blur-lg rounded-full space-x-7 w-auto justify-center md:w-[32%] text-lg font-medium">
@@ -62,7 +65,7 @@ function NAV() {
         )}
       </div>
       <Link href="/sign-in">
-        <button className="bg-white md:block hidden text-black px-4 py-2 rounded-md">
+        <button className="bg-white cursor-pointer md:block hidden text-black px-4 py-2 rounded-full font-medium hover:bg-black hover:text-white transition duration-300 ease-in">
           Sign In
         </button>
       </Link>

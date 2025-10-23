@@ -3,36 +3,37 @@ import React, { useState, useEffect } from "react";
 
 const events = [
   {
-    id: 1,
-    title: "Students from 50+ Colleges",
-    date: "Feb 2024",
-    description:
-      "Discover teammates from different colleges and explore cross-campus collaborations.",
-    images: ["/ENTER.jpeg", "/hero.jpg", "/hero.jpg"],
-  },
-  {
     id: 2,
-    title: "Skill-based Matchmaking",
-    date: "Mar 2024",
+    title: "Verified Student Profiles",
+    target: "2025",
     description:
-      "Choose team members by their technical expertise — frontend, backend, design, or management.",
-    images: ["/hero.jpg", "/ENTER.jpeg"],
+      "Each member will have a verified profile showing college, domain skills, and past event participation.",
+    images: ["/ENTER.jpeg", "/hero.jpg", "/ENTER.jpeg"],
   },
+  ,
   {
     id: 3,
-    title: "Interest-Aligned Teams",
-    date: "Jun 2024",
+    title: "Event-Specific Chat Rooms",
+    target: "2025",
     description:
-      "Join teams that share your passion — AI, web dev, design, or sustainability.",
+      "Dedicated chat spaces for each event to discuss ideas, share resources, and coordinate projects seamlessly.",
+    images: ["/hero.jpg", "/ENTER.jpeg", "/hero.jpg"],
+  },
+  {
+    id: 1,
+    title: "AI-Based Team Matching",
+    target: "2025",
+    description:
+      "Automatically get teammate suggestions using AI that analyzes your interests, skills, and previous event history.",
     images: ["/hero.jpg", "/ENTER.jpeg", "/hero.jpg"],
   },
   {
     id: 4,
-    title: "400+ Active Members",
-    date: "Nov 2024",
+    title: "Internship & Collaboration Network",
+    target: "2026",
     description:
-      "Pick from hundreds of verified participants ready to collaborate on exciting projects.",
-    images: ["/ENTER.jpeg", "/hero.jpg", "/IIT.jpg", "/IIT1.jpg"],
+      "Expand beyond college events to connect students with startup projects, internships, and real-world collaborations.",
+    images: ["/ENTER.jpeg", "/hero.jpg", "/ENTER.jpeg"],
   },
 ];
 
@@ -44,25 +45,25 @@ export default function VerticalTimeline() {
       setActiveIndex((prev) =>
         prev.map((val, i) => (val + 1) % events[i].images.length)
       );
-    }, 1000);
+    }, 2000); // slower cycle
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="px-6 py-16 bg-[#B3B3B3]">
+    <section className="px-6 py-16 bg-gray-100">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <div className="w-full mb-12">
-          <h2 className="text-4xl text-gray-100 font-bold bbh-sans-bartle-regular">
+          <h2 className="text-4xl text-[#B3B3B3] font-bold bbh-sans-bartle-regular">
             No team? No worries!
           </h2>
           <p className="mt-2 text-gray-600">
             Find your perfect teammates based on{" "}
             <span className="text-gray-800 font-medium">
               college, skills, interests,
-            </span>
+            </span>{" "}
             and{" "}
-            <span className="text-gray-800 font-medium">event category.</span>
+            <span className="text-gray-800 font-medium">event category.</span>{" "}
             Connect, chat, and build your dream team before the event starts.
           </p>
         </div>
@@ -78,10 +79,10 @@ export default function VerticalTimeline() {
                 key={ev.id}
                 className="flex flex-col md:flex-row items-start md:items-center relative z-10"
               >
-                {/* Date + Marker */}
+                {/* Target Year + Marker */}
                 <div className="flex items-center gap-4">
-                  <div className="text-white font-semibold bg-[#2B2B2B] px-3 py-1 rounded-full ">
-                    {ev.date}
+                  <div className="text-white font-semibold bg-[#2B2B2B] px-3 py-1 rounded-full">
+                    {ev.target}
                   </div>
                   <div className="relative">
                     <span className="block w-5 h-5 rounded-full bg-blue-600 ring-4 ring-white shadow-md"></span>
@@ -95,22 +96,25 @@ export default function VerticalTimeline() {
                     <img
                       src={ev.images[activeIndex[i]]}
                       alt={ev.title}
-                      className="w-full h-full object-cover flex transition-all duration-500"
+                      className="w-full h-full object-cover transition-all duration-500"
                     />
                   </div>
 
                   {/* Text Content */}
-                  <div className="w-1/2 p-4 flex flex-col ">
-                    <h3 className="font-bold text-gray-100 bbh-sans-bartle-regular">
+                  <div className="w-1/2 p-4 flex flex-col">
+                    <h3 className="font-bold text-[10px] text-[#B3B3B3] bbh-sans-bartle-regular">
                       {ev.title}
                     </h3>
-                    <p className="mt-2 text-gray-600">{ev.description}</p>
+                    <p className="mt-2 text-gray-400 text-[10px]">
+                      {ev.description}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <h1 className="text-4xl text-center mt-24 text-gray-100 font-bold bbh-sans-bartle-regular">
+
+          <h1 className="text-4xl mt-24 text-[#B3B3B3] font-bold bbh-sans-bartle-regular text-center">
             So, what are you waiting for? Join us today!
           </h1>
         </div>

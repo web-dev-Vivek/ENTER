@@ -3,32 +3,32 @@ import React, { useState, useEffect } from "react";
 
 const events = [
   {
+    id: 4,
+    title: "IIT DELHI - UI/UX HACKATHON",
+    date: "Nov 2024",
+    description: "Worked on UI/UX projects and team competitions.",
+    images: ["/ENTER.jpeg", "/hero.jpg", "/IIT.jpg", "/IIT1.jpg"],
+  },
+  {
     id: 1,
     title: "DELHI DEVELOPER MEET TOUR",
     date: "Feb 2024",
     description: "Attended sessions, workshops, and networking events.",
-    images: ["/hero.jpg", "/hero.jpg", "/hero.jpg"],
+    images: ["/ENTER.jpeg", "/hero.jpg", "/hero.jpg"],
   },
   {
     id: 2,
     title: "GOOGLE DEV FEST",
     date: "May 2024",
     description: "Participated in coding challenges and tech talks.",
-    images: ["/hero.jpg", "/hero.jpg"],
+    images: ["/hero.jpg", "/ENTER.jpeg"],
   },
   {
     id: 3,
     title: "MANAV RACHNA - HACKMOR",
     date: "Aug 2024",
     description: "Built prototype apps and attended mentoring sessions.",
-    images: ["/hero.jpg", "/hero.jpg", "/hero.jpg"],
-  },
-  {
-    id: 4,
-    title: "IIT DELHI - UI/UX HACKATHON",
-    date: "Nov 2024",
-    description: "Worked on UI/UX projects and team competitions.",
-    images: ["/hero.jpg", "/hero.jpg"],
+    images: ["/hero.jpg", "/ENTER.jpeg", "/hero.jpg"],
   },
 ];
 
@@ -40,7 +40,7 @@ export default function VerticalTimeline() {
       setActiveIndex((prev) =>
         prev.map((val, i) => (val + 1) % events[i].images.length)
       );
-    }, 2000);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -85,7 +85,7 @@ export default function VerticalTimeline() {
                     <img
                       src={ev.images[activeIndex[i]]}
                       alt={ev.title}
-                      className="w-full h-full object-cover transition-all duration-500"
+                      className="w-full h-full object-cover flex transition-all duration-500"
                     />
                   </div>
 

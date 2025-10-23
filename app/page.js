@@ -7,6 +7,7 @@ import Teamdid from "./components/Teamdid";
 import Link from "next/link";
 import gsap from "gsap";
 import TeamHere from "./components/teamhere";
+import Ourgoal from "./components/Ourgoal";
 
 export default function Home() {
   const [showPage, setShowPage] = useState(false);
@@ -57,11 +58,16 @@ export default function Home() {
                 create unforgettable experiences together.
               </p>
 
-              <Link href="/">
-                <button className="mt-6 px-6 py-3 bg-white text-black text-lg font-semibold rounded-full hover:bg-transparent hover:text-white border-2 border-white transition-all duration-300">
-                  Explore Events {":)"}
-                </button>
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/sign-up">
+                  <button className="group cursor-pointer relative mt-6 px-8 py-3 overflow-hidden rounded-full bg-white text-black text-lg font-semibold transition-all duration-500 hover:text-white">
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#B3B3B3] to-[#2B2B2B] translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+                    <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">
+                      Explore Events
+                    </span>
+                  </button>
+                </Link>
+              </div>
             </div>
 
             <div className="mt-10 lg:mt-0 lg:w-[45%] w-full flex justify-center">
@@ -77,6 +83,7 @@ export default function Home() {
 
           <Teamdid />
           <TeamHere />
+          <Ourgoal />
         </>
       )}
     </div>
