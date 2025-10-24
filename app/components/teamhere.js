@@ -49,7 +49,7 @@ export default function VerticalTimeline() {
   }, []);
 
   return (
-    <section className="px-6 py-16 bg-[#B3B3B3]">
+    <section className="px-6 overflow-x-scroll py-16 bg-[#B3B3B3]">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <div className="w-full mb-12">

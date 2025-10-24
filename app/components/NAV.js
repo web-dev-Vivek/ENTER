@@ -37,7 +37,7 @@ function NAV() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-none text-white z-50 px-6 py-3 flex justify-between items-center">
+    <nav className="fixed overflow-x-scroll top-0 left-0 w-full bg-none text-white z-50 px-6 py-3 flex justify-between items-center">
       {/* Logo */}
       <a
         href="/"
@@ -99,7 +99,7 @@ function NAV() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 h-screen w-2/3 bg-black/90 backdrop-blur-xl text-white flex flex-col items-center pt-20 space-y-8 text-2xl shadow-lg md:hidden z-50"
+              className="fixed top-0 overflow-x-scroll right-0 h-screen w-2/3 bg-black/90 backdrop-blur-xl text-white flex flex-col items-center pt-20 space-y-8 text-2xl shadow-lg md:hidden z-50"
             >
               {["Home", "Events", "Team", "About", "Contact"].map((item) => (
                 <motion.a
