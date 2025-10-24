@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="relative overflow-x-scroll min-h-screen flex flex-col">
       {/* Splash Overlay */}
       {!showPage && (
         <div className="fixed inset-0 bg-black flex items-center justify-center z-[9999]">
