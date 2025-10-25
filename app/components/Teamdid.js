@@ -191,11 +191,13 @@ export default function VerticalTimeline() {
                       </button>
                     </div>
 
-                    <div className="w-1/2 p-4 flex flex-col">
-                      <h3 className="font-bold bbh-sans-bartle-regular text-[#B3B3B3]">
+                    <div className="w-1/2 p-4 flex flex-col justify-center md:justify-start">
+                      <h3 className="font-bold text-[10px] md:text-sm bbh-sans-bartle-regular text-[#B3B3B3]">
                         {ev.title}
                       </h3>
-                      <p className="mt-2 text-gray-600">{ev.description}</p>
+                      <p className="mt-2 text-[10px] md:text-[13px] text-gray-600">
+                        {ev.description}
+                      </p>
                     </div>
                   </div>
                 </div>
