@@ -18,27 +18,72 @@ const events = [
   {
     id: 1,
     title: "DELHI DEVELOPER MEET TOUR",
-    date: "Feb 2024",
+    date: "JUNE 2025",
     description: "Attended sessions, workshops, and networking events.",
     images: [
       "/WhatsApp Video 2025-10-24 at 11.15.38 PM.mp4", // VIDEO!
-      "/WhatsApp Image 2025-10-24 at 11.15.14 PM.jpeg",
-      "/WhatsApp Image 2025-10-24 at 11.15.13 PM.jpeg",
+      "/WhatsApp Image 2025-10-24 at 11.29.04 PM(1).jpeg",
+      "/WhatsApp Image 2025-10-24 at 11.29.57 PM.jpeg",
     ],
   },
   {
     id: 2,
     title: "GOOGLE DEV FEST",
-    date: "May 2024",
-    description: "Participated in coding challenges and tech talks.",
-    images: ["/WhatsApp Video 2025-10-22 at 8.51.32 PM.mp4", "/ENTER.jpeg"],
+    date: "SEPT 2025",
+    description: "Attended startups tech talks and also shared our ideas.",
+    images: ["/WhatsApp Video 2025-10-22 at 8.51.32 PM.mp4"],
+  },
+  {
+    id: 6,
+    title: "Microsoft Azure - Web3 pe Charcha",
+    date: "AUG 2025",
+    description: "Worked on UI/UX projects and team competitions.",
+    images: [
+      "/WhatsApp Image 2025-10-22 at 8.54.59 PM(2).jpeg",
+      "/WhatsApp Image 2025-10-22 at 8.54.59 PM.jpeg",
+      "/yash.jpeg",
+    ],
+  },
+  {
+    id: 8,
+    title: "IIT DEHLI - Adobe designing",
+    date: "AUG 2025",
+    description: "Worked on UI/UX projects and team competitions.",
+    images: [
+      "/WhatsApp Image 2025-10-22 at 8.55.14 PM(1).jpeg",
+      "/WhatsApp Image 2025-10-22 at 8.55.18 PM.jpeg",
+    ],
   },
   {
     id: 3,
     title: "MANAV RACHNA - HACKMOR",
-    date: "Aug 2024",
-    description: "Built prototype apps and attended mentoring sessions.",
-    images: ["/hero.jpg", "/ENTER.jpeg", "/hero.jpg"],
+    date: "OCT 2024",
+    description: "Built prototype apps and presented to judges.",
+    images: [
+      "/Video-58.mp4",
+      "SnapInsta.to_463597058_557964693393352_1870869404072298829_n.jpg",
+      "SnapInsta.to_463720177_1537510687136852_373010303481400760_n.jpg",
+      "SnapInsta.to_463769110_529910823330670_5386812848561762757_n.jpg",
+      "SnapInsta.to_463800390_903023818135938_268998359787801868_n.jpg",
+    ],
+  },
+  {
+    id: 5,
+    title: "YMCA - TECHNOVATE",
+    date: "FEB 2025",
+    description: "Worked on UI/UX projects and team competitions.",
+    images: ["/Video-44.mp4"],
+  },
+  {
+    id: 7,
+    title: "IIIT DEHLI - E-Summit 2025",
+    date: "JULY 2025",
+    description: "Worked on UI/UX projects and team competitions.",
+    images: [
+      "/WhatsApp Image 2025-10-22 at 8.55.14 PM.jpeg",
+      "/WhatsApp Image 2025-10-22 at 8.55.13 PM.jpeg",
+      "/WhatsApp Image 2025-10-22 at 8.55.01 PM.jpeg",
+    ],
   },
 ];
 
@@ -93,7 +138,7 @@ export default function VerticalTimeline() {
         </div>
 
         <div className="relative ">
-          <div className="absolute top-0 left-10 w-[3px] bg-gray-300 h-full"></div>
+          <div className="absolute top-0 left-10 w-[3px] bg-gray-300 h-[93%] md:h-[95%]"></div>
 
           <div className="flex flex-col space-y-16 relative">
             {events.map((ev, i) => {
@@ -117,7 +162,7 @@ export default function VerticalTimeline() {
                         <video
                           ref={(el) => (videoRefs.current[i] = el)}
                           src={current}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-center"
                           autoPlay
                           loop
                           muted
@@ -158,8 +203,8 @@ export default function VerticalTimeline() {
             })}
           </div>
 
-          <h1 className="text-4xl mt-24 text-[#B3B3B3] font-bold">
-            JOIN OUR TEAM
+          <h1 className="text-4xl bbh-sans-bartle-regular mt-24 text-[#B3B3B3] font-bold">
+            JOIN THESE FRAME...
           </h1>
         </div>
       </div>
