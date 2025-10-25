@@ -104,7 +104,7 @@ export default function VerticalTimeline() {
             )
           );
         }
-      }, 1000);
+      }, 2000);
     });
 
     return () => intervals.forEach((i) => clearInterval(i));
@@ -129,7 +129,7 @@ export default function VerticalTimeline() {
   };
 
   return (
-    <section className="px-6 overflow-x-scroll py-16 bg-gray-100">
+    <section className="px-2 md:px-6 overflow-x-scroll py-16 bg-gray-100">
       <div className="max-w-5xl mx-auto">
         <div className="w-full mb-12">
           <h2 className="text-4xl bbh-sans-bartle-regular text-[#B3B3B3] font-bold">

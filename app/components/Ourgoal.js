@@ -102,7 +102,7 @@ export default function VerticalTimeline() {
 
                   {/* Text Content */}
                   <div className="w-1/2 p-4 flex flex-col">
-                    <h3 className="font-bold text-[10px] text-[#B3B3B3] bbh-sans-bartle-regular">
+                    <h3 className="font-bold text-sm text-[#B3B3B3] bbh-sans-bartle-regular">
                       {ev.title}
                     </h3>
                     <p className="mt-2 text-gray-400 text-[10px]">
