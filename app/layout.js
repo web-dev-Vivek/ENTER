@@ -1,6 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Badeen_Display } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import LenisProvider from "./LenisProvider"; // 👈 new file
+import LenisProvider from "./LenisProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +10,12 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const badeenDisplay = Badeen_Display({
+  variable: "--font-badeen-display",
+  weight: "400", // must specify since only 400 is available
   subsets: ["latin"],
 });
 
@@ -23,7 +29,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${badeenDisplay.variable} antialiased`}
         >
           <LenisProvider>{children}</LenisProvider>
         </body>
