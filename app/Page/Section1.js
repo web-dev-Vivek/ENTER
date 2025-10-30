@@ -6,11 +6,26 @@ const categories = [
   {
     title: "WHAT OUR TEAM DID??",
     cards: [
-      { img: "/images/img1.jpg", text: "FIND YOUR RV MATCH" },
-      { img: "/images/img2.jpg", text: "IT’S WORTH YOUR WILD" },
-      { img: "/images/img3.jpg", text: "FIND A DEALER" },
-      { img: "/images/img4.jpg", text: "PLAN A TRIP" },
-      { img: "/images/img5.jpg", text: "GO BEYOND" },
+      {
+        img: "/WhatsApp Image 2025-10-24 at 11.29.04 PM(1).jpeg",
+        text: "FIND YOUR RV MATCH",
+      },
+      {
+        img: "/WhatsApp Image 2025-10-24 at 11.00.23 PM.jpeg",
+        text: "IT’S WORTH YOUR WILD",
+      },
+      {
+        img: "/SnapInsta.to_463769110_529910823330670_5386812848561762757_n.jpg",
+        text: "FIND A DEALER",
+      },
+      {
+        img: "/WhatsApp Image 2025-10-22 at 8.55.14 PM.jpeg",
+        text: "PLAN A TRIP",
+      },
+      {
+        img: "/WhatsApp Image 2025-10-22 at 8.54.59 PM(1).jpeg",
+        text: "GO BEYOND",
+      },
     ],
   },
 ];
@@ -33,12 +48,12 @@ function Section1() {
                 {category.cards.map((card, index) => (
                   <div
                     key={index}
-                    className="relative w-[260px] h-[350px] bg-gray-200 rounded-xl overflow-hidden hover:scale-[1.02] transition-transform"
+                    className="relative w-[260px] h-[350px] group bg-gray-200 rounded-xl overflow-hidden transition-transform"
                   >
                     <img
                       src={card.img}
                       alt={card.text}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute bottom-0 left-0 w-full bg-black/40 text-white p-4 flex items-center justify-between">
                       <p className="text-lg font-semibold leading-tight">
@@ -50,13 +65,12 @@ function Section1() {
                 ))}
               </div>
             </div>
-
-            {/* ✅ Vertical Divider Between Categories */}
-            {i !== categories.length - 1 && (
-              <div className="w-[3px] bg-black/30 rounded-full"></div>
-            )}
           </React.Fragment>
         ))}
+      </div>
+      <div className="mt-12 text-start text-lg md:text-xl font-medium bbh-sans-bartle-regular">
+        Already chasing innovation? Explore events, find teammates, and get
+        inspired by student changemakers — all in one place with ENTER.
       </div>
     </section>
   );
