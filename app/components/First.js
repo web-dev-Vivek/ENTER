@@ -22,7 +22,9 @@ function First() {
     <div
       className="w-full h-screen bg-cover bg-center bg-no-repeat transition-all duration-700"
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
-    />
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+    </div>
   );
 }
 
