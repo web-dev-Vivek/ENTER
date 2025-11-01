@@ -15,8 +15,8 @@ export default function HomeSection() {
           <h1 className="text-4xl md:text-7xl uppercase flex pr-4 md:pr-20 items-center md:items-start justify-end w-[100vw] h-[20vh] bbh-sans-bartle-regular">
             Your
           </h1>
-          <h1 className="text-4xl md:text-7xl uppercase flex w-[100vw] h-[20vh] justify-center items-end bbh-sans-bartle-regular opacity-95">
-            <div className="flex flex-row justify-center items-center">
+          <h1 className="text-4xl  md:text-7xl uppercase flex w-[100vw] h-[20vh] justify-center items-end bbh-sans-bartle-regular opacity-95">
+            <div className="flex pb-10 flex-row justify-center items-center">
               Events
               <AnimatedArrow />
             </div>
