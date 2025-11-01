@@ -100,13 +100,13 @@ function Whatwedid() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[100vh] dm-serif-text text-[#222013] bg-[#b5beac] overflow-hidden"
+      className="relative w-full h-[100vh] dm-serif-text text-[#222013] bg-[#aeb7a8] overflow-hidden"
     >
       {/* Spacer gives vertical scroll */}
-      <div className="md:h-[140vh]">
+      <div className="md:h-[110vh] flex flex-col justify-center bg-[#aeb7a8]">
         <div
           ref={scrollContainerRef}
-          className="sticky top-0 flex flex-col justify-center md:justify-end w-fit h-[100vh] px-5 md:px-20 py-16"
+          className="sticky top-0 flex flex-col justify-center w-fit h-[100vh] px-5 md:px-20 py-16"
         >
           <div className="flex text-5xl md:text-8xl justify-between items-center w-full mb-12">
             <h2 className=" font-bold text-[#222013]">Started - 2024</h2>
@@ -121,18 +121,20 @@ function Whatwedid() {
               {category.cards.map((card, index) => (
                 <div
                   key={index}
-                  className="relative w-[260px] h-[350px] group bg-gray-200 rounded-xl overflow-hidden shrink-0"
+                  className="relative w-[300px] h-[400px] group bg-gray-200 rounded-xl overflow-hidden shrink-0"
                 >
                   <img
                     src={card.img}
                     alt={card.text}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white to-transparent p-4 flex items-center justify-between">
-                    <p className="text-lg font-semibold leading-tight">
+                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white to-transparent p-4 flex items-end justify-between">
+                    <p className="text-4xl font-semibold leading-tight">
                       {card.text}
                     </p>
-                    <ChevronRight size={22} />
+                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-black/40 text-white ">
+                      <ChevronRight size={22} />
+                    </div>
                   </div>
                 </div>
               ))}
