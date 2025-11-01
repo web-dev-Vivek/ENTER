@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono, Badeen_Display } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
 import LenisProvider from "./LenisProvider";
 import "./globals.css";
 
@@ -26,14 +25,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${badeenDisplay.variable} antialiased`}
-        >
-          <LenisProvider>{children}</LenisProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${badeenDisplay.variable} antialiased`}
+      >
+        <LenisProvider>{children}</LenisProvider>
+      </body>
+    </html>
   );
 }
