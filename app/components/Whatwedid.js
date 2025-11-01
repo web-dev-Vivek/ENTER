@@ -108,7 +108,7 @@ function Whatwedid() {
           ref={scrollContainerRef}
           className="sticky top-0 flex flex-col justify-center w-fit h-[100vh] px-5 md:px-20 py-16"
         >
-          <div className="flex text-5xl md:text-8xl justify-between items-center w-full mb-12">
+          <div className="flex text-5xl md:text-8xl justify-between items-center w-full mb-2">
             <h2 className=" font-bold text-[#222013]">Started - 2024</h2>
             <h2 className=" font-bold text-[#222013]">Continued...</h2>
           </div>
