@@ -3,6 +3,7 @@ import LenisProvider from "./LenisProvider";
 import HomeSection from "./Page/Section";
 import TeamDid from "./Page/Section1";
 import Feature from "./Page/Section2";
+import Recent from "./Page/Section3";
 
 function page() {
   return (
@@ -10,6 +11,7 @@ function page() {
       <HomeSection />
       <TeamDid />
       <Feature />
+      <Recent />
     </LenisProvider>
   );
 }
