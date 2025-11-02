@@ -6,13 +6,14 @@ function Section1() {
   return (
     <section className="w-full md:min-h-screen border-l-2 border-[#222013] bg-[#aeb7a8]">
       <Whatwedid />
-      <div className="w-full flex justify-between gap-5 items-center p-4 md:pr-36 h-[40vh] ">
-        <div className="w-[60vw] h-[1px] bg-white"></div>
+      <div className="w-full flex justify-between gap-5 items-center md:pr-36 h-[40vh] ">
+        <div className="w-[35vw] md:w-[60vw] h-[1px] bg-white"></div>
         <p className="md:w-[30vw] text-2xl text-end leading-tight ">
           Already part of the student hustle? Dive into this space for event
           updates, collaboration ideas, and stories from young innovators
           shaping the tech scene. Get Inspired with ENTER.
         </p>
+        <div className="block md:hidden w-[35vw] h-[1px] bg-white"></div>
       </div>
     </section>
   );
