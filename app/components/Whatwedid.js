@@ -13,10 +13,10 @@ const categories = [
     cards: [
       {
         img: "/WhatsApp Image 2025-10-24 at 11.29.04 PM(1).jpeg",
-        text: "FIND YOUR RV MATCH",
+        text: "IIT DEHLI ",
       },
       {
-        img: "/WhatsApp Image 2025-10-24 at 11.00.23 PM.jpeg",
+        img: "/WhatsApp Image 2025-10-24 at 11.29.04 PM(1).jpeg",
         text: "IT’S WORTH YOUR WILD",
       },
       {
