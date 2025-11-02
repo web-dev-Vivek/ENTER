@@ -103,6 +103,29 @@ function Whatwedid() {
       className="relative w-full h-[100vh] dm-serif-text text-[#222013] bg-[#aeb7a8] overflow-hidden"
     >
       {/* Spacer gives vertical scroll */}
+      <div className="absolute top-15 right-0 rotate-90 pr-20 z-20">
+        <svg
+          className="o-ui-arrow mb-6 w-10 h-10 md:w-16 md:h-16"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.10162 3.10156L62.9999 62.9999"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M63 1.00001L63 63L0.999989 63"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
       <div className="md:h-[110vh] flex flex-col justify-center bg-[#aeb7a8]">
         <div
           ref={scrollContainerRef}
