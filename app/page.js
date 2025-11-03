@@ -8,10 +8,12 @@ import Recent from "./Page/Section3";
 function page() {
   return (
     <LenisProvider>
-      <HomeSection />
-      <TeamDid />
-      <Feature />
-      <Recent />
+      <div>
+        <HomeSection />
+        <TeamDid />
+        <Feature />
+        <Recent />
+      </div>
     </LenisProvider>
   );
 }
