@@ -11,49 +11,42 @@ const categories = [
   {
     title: "WHAT OUR TEAM DID??",
     cards: [
+      { img: "hero1.jpg", text: "IIT DEHLI" },
       {
-        img: "/WhatsApp Image 2025-10-24 at 11.29.04 PM(1).jpeg",
-        text: "IIT DEHLI ",
+        img: "/WhatsApp Video 2025-10-22 at 8.51.32 PM.mp4",
+        text: "DEV FEST",
       },
       {
-        img: "/WhatsApp Image 2025-10-24 at 11.29.04 PM(1).jpeg",
-        text: "IT’S WORTH YOUR WILD",
-      },
-      {
-        img: "/SnapInsta.to_463769110_529910823330670_5386812848561762757_n.jpg",
-        text: "FIND A DEALER",
+        img: "/Video-58.mp4",
+        text: "HACKMOR",
       },
       {
         img: "/WhatsApp Image 2025-10-22 at 8.55.14 PM.jpeg",
-        text: "PLAN A TRIP",
+        text: "IIIT DEHLI",
       },
       {
-        img: "/WhatsApp Image 2025-10-22 at 8.54.59 PM(1).jpeg",
-        text: "GO BEYOND",
+        img: "/WhatsApp Video 2025-10-24 at 11.15.38 PM.mp4",
+        text: "DEHLI DEVELOPER MEETUP",
       },
       {
-        img: "/WhatsApp Image 2025-10-24 at 11.00.23 PM.jpeg",
-        text: "IT’S WORTH YOUR WILD",
+        img: "/WhatsApp Image 2025-10-22 at 8.55.01 PM.jpeg",
+        text: "WEB3 PE CHARCHA",
       },
       {
-        img: "/SnapInsta.to_463769110_529910823330670_5386812848561762757_n.jpg",
-        text: "FIND A DEALER",
+        img: "/Video-44.mp4",
+        text: "YMCA EVENT",
       },
       {
-        img: "/WhatsApp Image 2025-10-22 at 8.55.14 PM.jpeg",
-        text: "PLAN A TRIP",
+        img: "/WhatsApp Image 2025-10-22 at 8.54.59 PM(2).jpeg",
+        text: "MICROSOFT OFFICE",
       },
       {
-        img: "/WhatsApp Image 2025-10-24 at 11.00.23 PM.jpeg",
-        text: "IT’S WORTH YOUR WILD",
+        img: "/WhatsApp Image 2025-10-22 at 8.55.13 PM.jpeg",
+        text: "E-Summit",
       },
       {
-        img: "/SnapInsta.to_463769110_529910823330670_5386812848561762757_n.jpg",
-        text: "FIND A DEALER",
-      },
-      {
-        img: "/WhatsApp Image 2025-10-22 at 8.55.14 PM.jpeg",
-        text: "PLAN A TRIP",
+        img: "/TeamIt.jpg",
+        text: "PLAN A EVENT",
       },
     ],
   },
@@ -70,7 +63,7 @@ function Whatwedid() {
 
     const totalScrollWidth = scrollContainer.scrollWidth;
     const viewportWidth = window.innerWidth;
-    const scrollDistance = totalScrollWidth - viewportWidth + 80; // ✅ ensure right padding visible
+    const scrollDistance = totalScrollWidth - viewportWidth + 80;
 
     const tween = gsap.to(scrollContainer, {
       x: -scrollDistance,
@@ -102,7 +95,6 @@ function Whatwedid() {
       ref={sectionRef}
       className="relative w-full h-[100vh] dm-serif-text text-[#222013] bg-[#aeb7a8] overflow-hidden"
     >
-      {/* Spacer gives vertical scroll */}
       <div className="absolute top-15 right-0 rotate-90 pr-20 z-20">
         <svg
           className="o-ui-arrow mb-6 w-10 h-10 md:w-16 md:h-16"
@@ -126,14 +118,15 @@ function Whatwedid() {
           />
         </svg>
       </div>
+
       <div className="md:h-[110vh] flex flex-col justify-center bg-[#aeb7a8]">
         <div
           ref={scrollContainerRef}
           className="sticky top-0 flex flex-col justify-center w-fit h-[100vh] px-5 md:px-20 py-16"
         >
           <div className="flex text-5xl md:text-8xl justify-between items-center w-full mb-2">
-            <h2 className=" font-bold text-[#222013]">Started - 2024</h2>
-            <h2 className=" font-bold text-[#222013]">Continued...</h2>
+            <h2 className="font-bold text-[#222013]">Started - 2024</h2>
+            <h2 className="font-bold text-[#222013]">Continued...</h2>
           </div>
 
           {categories.map((category, i) => (
@@ -141,26 +134,42 @@ function Whatwedid() {
               key={i}
               className="flex gap-8 border-l-2 border-[#222013] pl-8"
             >
-              {category.cards.map((card, index) => (
-                <div
-                  key={index}
-                  className="relative w-[300px] h-[400px] group bg-gray-200 rounded-xl overflow-hidden shrink-0"
-                >
-                  <img
-                    src={card.img}
-                    alt={card.text}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white to-transparent p-4 flex items-end justify-between">
-                    <p className="text-4xl font-semibold leading-tight">
-                      {card.text}
-                    </p>
-                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-black/40 text-white ">
-                      <ChevronRight size={22} />
+              {category.cards.map((card, index) => {
+                const isVideo = card.img.endsWith(".mp4"); // ✅ detect video
+
+                return (
+                  <div
+                    key={index}
+                    className="relative w-[300px] h-[400px] group bg-gray-200 rounded-xl overflow-hidden shrink-0"
+                  >
+                    {isVideo ? (
+                      <video
+                        src={card.img}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={card.img}
+                        alt={card.text}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    )}
+
+                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white to-transparent p-4 flex items-end justify-between">
+                      <p className="text-4xl font-semibold leading-tight">
+                        {card.text}
+                      </p>
+                      <div className="flex items-center justify-center h-10 w-10 rounded-full bg-black/40 text-white ">
+                        <ChevronRight size={22} />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ))}
         </div>
