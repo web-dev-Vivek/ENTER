@@ -2,7 +2,7 @@ import React from "react";
 
 function TeamIt() {
   return (
-    <div className="w-full h-[100vh]  bg-[url('../public/TeamIt.jpg')] bg-cover bg-center  flex md:flex-row items-center justify-center bg-[#aeb7a8]">
+    <div className="w-full h-[100vh] text-white bg-[url('../public/TeamIt.jpg')] bg-cover bg-center  flex md:flex-row items-center justify-center bg-[#aeb7a8]">
       <div className="flex flex-col justify-between w-[48vw] border-l-1 p-3 border-white h-full">
         <div className="flex flex-col items-start justify-start h-[80%] space-y-4">
           <div className="flex items-center space-x-2  text-sm">

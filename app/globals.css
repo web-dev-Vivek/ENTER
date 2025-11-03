@@ -7,22 +7,11 @@
 
 /* Theme variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
   /* Font variables */
   --font-badeen-display: "Badeen Display", serif;
   --font-bbh-sans-bartle: "BBH Sans Bartle", sans-serif;
   --font-fascinate: "Fascinate", cursive;
   --font-dm-serif-text: "DM Serif Text", serif;
-}
-
-/* Dark mode colors */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171717;
-    --foreground: #ededed;
-  }
 }
 
 /* Base body styles */

@@ -17,7 +17,7 @@ function Navbar() {
   const currentItem = index === 0 ? items[0] : items[index];
 
   return (
-    <div className="w-full fixed top-0 left-0 z-50 flex items-center justify-between px-4 md:px-6 py-3 md:py-4 bg-[#222013] backdrop-blur-sm">
+    <div className="w-full fixed top-0 left-0 z-50 flex items-center text-white justify-between px-4 md:px-6 py-3 md:py-4 bg-[#222013] backdrop-blur-sm">
       {/* Left nav links */}
       <div className="hidden md:flex space-x-4 dm-serif-text">
         <a
