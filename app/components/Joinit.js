@@ -32,9 +32,14 @@ function Joinit() {
           </div>
 
           {/* Button at bottom-right */}
-          <button className="mt-6 md:mt-0 px-8 py-3 bg-orange-500 hover:bg-orange-600 transition rounded-full text-sm md:text-base font-semibold uppercase tracking-wider">
-            Join The Network →
-          </button>
+          <a
+            href="https://chat.whatsapp.com/I2mef312VKf7mmJjXPrdk7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 md:mt-0 px-8 py-3 bg-orange-500 hover:bg-orange-600 transition rounded-full text-sm md:text-base font-semibold uppercase tracking-wider inline-block text-white"
+          >
+            Join The Community
+          </a>
         </div>
       </div>
     </section>
