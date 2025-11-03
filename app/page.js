@@ -8,7 +8,7 @@ import Recent from "./Page/Section3";
 function page() {
   return (
     <LenisProvider>
-      <div>
+      <div className="w-full overflow-x-hidden bg-[#aeb7a8]">
         <HomeSection />
         <TeamDid />
         <Feature />
