@@ -11,7 +11,7 @@ const categories = [
   {
     title: "WHAT OUR TEAM DID??",
     cards: [
-      { img: "hero1.jpg", text: "IIT DEHLI" },
+      { img: "hero1.jpg", text: "IIT DELHI" },
       {
         img: "/WhatsApp Video 2025-10-22 at 8.51.32 PM.mp4",
         text: "DEV FEST",
@@ -22,11 +22,11 @@ const categories = [
       },
       {
         img: "/WhatsApp Image 2025-10-22 at 8.55.14 PM.jpeg",
-        text: "IIIT DEHLI",
+        text: "IIIT DELHI",
       },
       {
         img: "/WhatsApp Video 2025-10-24 at 11.15.38 PM.mp4",
-        text: "DEHLI DEVELOPER MEETUP",
+        text: "DELHI DEVELOPER MEETUP",
       },
       {
         img: "/WhatsApp Image 2025-10-22 at 8.55.01 PM.jpeg",
